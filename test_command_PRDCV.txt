@@ -1,0 +1,14 @@
+./glcts --deqp-caselist-file=gl_cts/data/mustpass/egl/aosp_mustpass/main/egl-master.txt --deqp-screen-rotation=unspecified --deqp-surface-width=256 --deqp-surface-height=256 --deqp-watchdog=disable --deqp-gl-config-name=rgba8888d24s8ms0 --deqp-log-filename=config-egl-master-cfg-1-run-0-width-256-height-256.qpa --deqp-log-images=disable --deqp-log-shader-sources=disable
+
+
+./glcts --deqp-caselist-file=gl_cts/data/mustpass/gles/aosp_mustpass/main/gles2-master.txt --deqp-screen-rotation=unspecified --deqp-surface-width=256 --deqp-surface-height=256 --deqp-watchdog=disable --deqp-gl-config-name=rgba8888d24s8ms0 --deqp-surface-type=window --deqp-log-filename=config-gles2-master-cfg-1-run-0-width-256-height-256.qpa --deqp-log-images=disable --deqp-log-shader-sources=disable
+
+
+
+./glcts --deqp-caselist-file=gl_cts/data/mustpass/gles/aosp_mustpass/main/gles3-master.txt --deqp-screen-rotation=unspecified --deqp-surface-width=256 --deqp-surface-height=256 --deqp-watchdog=disable --deqp-gl-config-name=rgba8888d24s8ms0 --deqp-surface-type=window --deqp-log-filename=config-gles3-master-cfg-1-run-1-width-256-height-256.qpa --deqp-log-images=disable --deqp-log-shader-sources=disable
+
+
+
+最初のディレクトリ構成
+kohzu@kohzu-linux:~/work/opengl_test_oss/VK-GL-CTS/build/external/openglcts/modules$ ls
+CMakeFiles  Makefile  cmake_install.cmake  common  cts-runner  gl  gl_cts  glcts  gles2  gles3  gles31  gles32  glesext  libglcts-package.a  runner
