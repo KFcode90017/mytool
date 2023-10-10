@@ -1,0 +1,16 @@
+
+commit 887a7e5717275c0dec007e6128298d5956c70891 (HEAD)                                       
+Author: Leandro Ribeiro <leandro.ribeiro@collabora.com>
+Date:   Wed Jun 3 10:01:06 2020 -0300
+
+launcher: do not touch VT/tty while using non-default seat
+
+Launcher-direct does not allow us to run using a different
+seat from the default seat0. This happens because VTs are
+only exposed to the default seat, and users that are on
+non-default seat should not touch VTs.
+
+Add check in launcher-direct to skip VT/tty management if user
+is running on a non-default seat.
+
+Signed-off-by: Leandro Ribeiro <leandro.ribeiro@collabora.com>
