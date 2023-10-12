@@ -1,0 +1,1 @@
+weston --backend drm-backend.so --tty=2 --seat=seat_virtual -i 0 &
