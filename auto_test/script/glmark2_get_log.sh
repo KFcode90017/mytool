@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#セーブするディレクトリに移動
 for ((i=1; i<=100; i++))
 do
     output_file="glmark2_result_${i}.log"
