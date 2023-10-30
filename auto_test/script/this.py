@@ -3,6 +3,7 @@ import re
 import argparse
 import statistics
 from scipy import stats
+import matplotlib.pyplot as plt
 
 # Pattern to search for glmark2 Score
 pattern = r'glmark2 Score: (\d+)'
@@ -53,3 +54,15 @@ print('t-test: t=%f, p=%f' % (t_stat, t_p))
 u_stat, u_p = stats.mannwhitneyu(scores_pre, scores_new)
 print('Mann-Whitney U test: U=%f, p=%f' % (u_stat, u_p))
 
+# Calculate Wilcoxon signed-rank test
+w_stat, w_p = stats.wilcoxon(scores_pre, scores_new)
+print('Wilcoxon signed-rank test: W=%f, p=%f' % (w_stat, w_p))
+
+
+#ヒストグラム
+plt.hist(scores_pre, bins=100)
+#plt.hist(scores_new, bins=20)
+plt.xlabel("FPS")
+plt.ylabel("Frequency")
+plt.title(f"FPS Histogram")
+plt.show()
