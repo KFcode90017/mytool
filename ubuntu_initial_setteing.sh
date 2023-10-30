@@ -10,3 +10,5 @@ git config --global user.email "kohzu.fumiya.code@gmail.com"
 git config --global user.name "Fumiya Kohzu"
 git config --global core.editor vim
 
+#raspberry-piのときにいるかも？
+#setxkbmap jp
