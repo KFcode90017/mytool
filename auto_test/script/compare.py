@@ -1,8 +1,6 @@
 import os
 import re
 import argparse
-import statistics
-from scipy import stats
 
 # Pattern to search for glmark2 Score
 pattern = r'glmark2 Score: (\d+)'
@@ -33,23 +31,6 @@ scores_new = []
 extract_scores(args.pre, scores_pre)
 extract_scores(args.new, scores_new)
 
-def compute_statistics(scores):
-    mean = statistics.mean(scores)
-    median = statistics.median(scores)
-    stddev = statistics.stdev(scores)
-    return mean, median, stddev
-
-mean_pre, median_pre, stddev_pre = compute_statistics(scores_pre)
-mean_new, median_new, stddev_new = compute_statistics(scores_new)
-
-print('Pre-modification scores: mean=%f, median=%f, stdev=%f' % (mean_pre, median_pre, stddev_pre))
-print('Post-modification scores: mean=%f, median=%f, stdev=%f' % (mean_new, median_new, stddev_new))
-
-# Calculate t-test
-t_stat, t_p = stats.ttest_ind(scores_pre, scores_new)
-print('t-test: t=%f, p=%f' % (t_stat, t_p))
-
-# Calculate Mann-Whitney U test (equivalent to Wilcoxon rank-sum test)
-u_stat, u_p = stats.mannwhitneyu(scores_pre, scores_new)
-print('Mann-Whitney U test: U=%f, p=%f' % (u_stat, u_p))
+print('Scores from pre-modification directory:', scores_pre)
+print('Scores from post-modification directory:', scores_new)
 
