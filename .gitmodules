@@ -1,0 +1,3 @@
+[submodule "auto_test/auto_test/glmark2_nframe"]
+	path = auto_test/auto_test/glmark2_nframe
+	url = https://github.com/glmark2/glmark2

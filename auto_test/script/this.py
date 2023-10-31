@@ -46,6 +46,36 @@ mean_new, median_new, stddev_new = compute_statistics(scores_new)
 print('Pre-modification scores: mean=%f, median=%f, stdev=%f' % (mean_pre, median_pre, stddev_pre))
 print('Post-modification scores: mean=%f, median=%f, stdev=%f' % (mean_new, median_new, stddev_new))
 
+# Shapiro-Wilk検定
+shapiro_stat, shapiro_p = stats.shapiro(scores_pre)
+
+# アンダーソン-ダーリング検定
+anderson_stat, anderson_critical, anderson_significance = stats.anderson(scores_pre, dist='norm')
+
+# コルモゴロフ-スミルノフ検定
+ks_stat, ks_p = stats.kstest(scores_pre, 'norm') 
+
+if shapiro_p > 0.05:
+    shapiro_normality = "OK"
+else:
+    shapiro_normality = "NOT"
+
+if all(anderson_significance > 0.05):
+    anderson_normality = "OK"
+else:
+    anderson_normality = "NOT"
+
+if ks_p > 0.05:
+    ks_normality = "OK"
+else:
+    ks_normality = "NOT"
+
+print(f"Shapiro-Wilk Test: p-value = {shapiro_p:.3f}")
+print(f"Shapiro-Wilk Test: {shapiro_normality}")
+print(f"Anderson-Darling Test: statistic = {anderson_stat:.3f}")
+print(f"Anderson-Darling: {anderson_normality}")
+print(f"Kolmogorov-Smirnov Test: p-value = {ks_p:.3f}")
+print(f"Kolmogorov-Smirnov: {ks_normality}")
 # Calculate t-test
 t_stat, t_p = stats.ttest_ind(scores_pre, scores_new)
 print('t-test: t=%f, p=%f' % (t_stat, t_p))
