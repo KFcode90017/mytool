@@ -89,10 +89,17 @@ w_stat, w_p = stats.wilcoxon(scores_pre, scores_new)
 print('Wilcoxon signed-rank test: W=%f, p=%f' % (w_stat, w_p))
 
 
+print('\n')
+print(scores_pre)
+print('\n')
+print(scores_new)
+
 #ヒストグラム
-plt.hist(scores_pre, bins=100)
-#plt.hist(scores_new, bins=20)
+plt.hist(scores_pre, bins=100, alpha=0.5, label='pre')
+plt.hist(scores_new, bins=100, alpha=0.5, label='new')
 plt.xlabel("FPS")
 plt.ylabel("Frequency")
 plt.title(f"FPS Histogram")
+plt.legend(loc='upper right')
 plt.show()
+
