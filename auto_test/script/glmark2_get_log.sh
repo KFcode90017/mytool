@@ -1,10 +1,23 @@
 #!/bin/bash
 
-#セーブするディレクトリに移動
+# 引数で指定されたコマンドを実行する関数を定義
+run_command() {
+    local output_file="$1"
+    local command="$2"
+    "$command" > "$output_file"
+    echo "Output saved to $output_file"
+}
+
+# 引数の数が正しいかチェック
+if [ $# -ne 1 ]; then
+    echo "Usage: $0 <command_to_run>"
+    exit 1
+fi
+
+# セーブするディレクトリに移動
 for ((i=1; i<=100; i++))
 do
-    output_file="glmark2_result_${i}.log"
-    /home/kohzu/kohzu/github_kohzu/KFcode/mytool/auto_test/glmark2_nframe/DESTDIR/usr/local/bin/glmark2-es2-wayland > "$output_file"
-    echo "Output saved to $output_file"
+    output_file="output_result_${i}.log"
+    run_command "$output_file" "$1"
 done
 
