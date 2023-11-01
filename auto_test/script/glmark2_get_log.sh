@@ -15,7 +15,7 @@ if [ $# -ne 1 ]; then
 fi
 
 # セーブするディレクトリに移動
-for ((i=1; i<=100; i++))
+for ((i=1; i<=50; i++))
 do
     output_file="output_result_${i}.log"
     run_command "$output_file" "$1"
