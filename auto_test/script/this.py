@@ -45,6 +45,7 @@ mean_new, median_new, stddev_new = compute_statistics(scores_new)
 
 print('Pre-modification scores: mean=%f, median=%f, stdev=%f' % (mean_pre, median_pre, stddev_pre))
 print('Post-modification scores: mean=%f, median=%f, stdev=%f' % (mean_new, median_new, stddev_new))
+print('post/pre =%f ' % (median_new/median_pre))
 
 # Shapiro-Wilk検定
 shapiro_stat, shapiro_p = stats.shapiro(scores_pre)
@@ -97,9 +98,11 @@ print(scores_new)
 #ヒストグラム
 plt.hist(scores_pre, bins=100, alpha=0.5, label='pre')
 plt.hist(scores_new, bins=100, alpha=0.5, label='new')
+plt.axvline(mean_pre, color='r', linestyle='dashed', linewidth=1, label='Mean (Pre)')
+plt.axvline(median_pre, color='g', linestyle='dotted', linewidth=1, label='Median (Pre)')
 plt.xlabel("FPS")
 plt.ylabel("Frequency")
 plt.title(f"FPS Histogram")
-plt.legend(loc='upper right')
+plt.legend(loc='upper left')
 plt.show()
 

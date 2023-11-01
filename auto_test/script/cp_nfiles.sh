@@ -1,10 +1,11 @@
 #!/bin/bash
 
 # コマンドライン引数でディレクトリを指定
-source_directory="$1"
-destination_directory="$2"
+n_cp_file="$1"
+source_directory="$2"
+destination_directory="$3"
 
-for i in {1..50}; do
+for i in $(seq 1 $n_cp_file); do
   source_file="$source_directory/glmark2_result_$i.log"
   destination_file="$destination_directory/glmark2_result_$i.log"
 
