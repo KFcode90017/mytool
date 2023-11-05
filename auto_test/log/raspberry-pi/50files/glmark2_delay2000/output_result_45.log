@@ -12,7 +12,7 @@
 [texture] texture-filter=linear: FPS: 14 FrameTime: 71.429 ms
 [texture] texture-filter=mipmap: FPS: 12 FrameTime: 83.333 ms
 [shading] shading=gouraud: FPS: 12 FrameTime: 83.333 ms
-[shading] shading=blinn-phong-inf: FPS: 11 FrameTime: 90.909 ms
+[shading] shading=blinn-phong-inf: FPS: 12 FrameTime: 83.333 ms
 [shading] shading=phong: FPS: 11 FrameTime: 90.909 ms
 [shading] shading=cel: FPS: 11 FrameTime: 90.909 ms
 [bump] bump-render=high-poly: FPS: 9 FrameTime: 111.111 ms
@@ -33,12 +33,12 @@
 [refract] <default>: FPS: 4 FrameTime: 250.000 ms
 [conditionals] fragment-steps=0:vertex-steps=0: FPS: 12 FrameTime: 83.333 ms
 [conditionals] fragment-steps=5:vertex-steps=0: FPS: 12 FrameTime: 83.333 ms
-[conditionals] fragment-steps=0:vertex-steps=5: FPS: 12 FrameTime: 83.333 ms
-[function] fragment-complexity=low:fragment-steps=5: FPS: 13 FrameTime: 76.923 ms
+[conditionals] fragment-steps=0:vertex-steps=5: FPS: 13 FrameTime: 76.923 ms
+[function] fragment-complexity=low:fragment-steps=5: FPS: 12 FrameTime: 83.333 ms
 [function] fragment-complexity=medium:fragment-steps=5: FPS: 12 FrameTime: 83.333 ms
-[loop] fragment-loop=false:fragment-steps=5:vertex-steps=5: FPS: 13 FrameTime: 76.923 ms
+[loop] fragment-loop=false:fragment-steps=5:vertex-steps=5: FPS: 12 FrameTime: 83.333 ms
 [loop] fragment-steps=5:fragment-uniform=false:vertex-steps=5: FPS: 12 FrameTime: 83.333 ms
-[loop] fragment-steps=5:fragment-uniform=true:vertex-steps=5: FPS: 12 FrameTime: 83.333 ms
+[loop] fragment-steps=5:fragment-uniform=true:vertex-steps=5: FPS: 13 FrameTime: 76.923 ms
 =======================================================
                                   glmark2 Score: 10 
 =======================================================
