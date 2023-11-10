@@ -1,0 +1,44 @@
+=======================================================
+    glmark2 2021.02
+=======================================================
+    OpenGL Information
+    GL_VENDOR:     Mesa/X.org
+    GL_RENDERER:   virgl
+    GL_VERSION:    OpenGL ES 3.0 Mesa 21.2.6
+=======================================================
+[build] use-vbo=false: FPS: 1509 FrameTime: 0.663 ms
+[build] use-vbo=true: FPS: 3213 FrameTime: 0.311 ms
+[texture] texture-filter=nearest: FPS: 3039 FrameTime: 0.329 ms
+[texture] texture-filter=linear: FPS: 3036 FrameTime: 0.329 ms
+[texture] texture-filter=mipmap: FPS: 2935 FrameTime: 0.341 ms
+[shading] shading=gouraud: FPS: 3087 FrameTime: 0.324 ms
+[shading] shading=blinn-phong-inf: FPS: 3123 FrameTime: 0.320 ms
+[shading] shading=phong: FPS: 3016 FrameTime: 0.332 ms
+[shading] shading=cel: FPS: 2927 FrameTime: 0.342 ms
+[bump] bump-render=high-poly: FPS: 2502 FrameTime: 0.400 ms
+[bump] bump-render=normals: FPS: 3170 FrameTime: 0.315 ms
+[bump] bump-render=height: FPS: 3028 FrameTime: 0.330 ms
+[effect2d] kernel=0,1,0;1,-4,1;0,1,0;: FPS: 2433 FrameTime: 0.411 ms
+[effect2d] kernel=1,1,1,1,1;1,1,1,1,1;1,1,1,1,1;: FPS: 1081 FrameTime: 0.925 ms
+[pulsar] light=false:quads=5:texture=false: FPS: 2978 FrameTime: 0.336 ms
+[desktop] blur-radius=5:effect=blur:passes=1:separable=true:windows=4: FPS: 1061 FrameTime: 0.943 ms
+[desktop] effect=shadow:windows=4: FPS: 1938 FrameTime: 0.516 ms
+[buffer] columns=200:interleave=false:update-dispersion=0.9:update-fraction=0.5:update-method=map: FPS: 605 FrameTime: 1.653 ms
+[buffer] columns=200:interleave=false:update-dispersion=0.9:update-fraction=0.5:update-method=subdata: FPS: 198 FrameTime: 5.051 ms
+[buffer] columns=200:interleave=true:update-dispersion=0.9:update-fraction=0.5:update-method=map: FPS: 582 FrameTime: 1.718 ms
+[ideas] speed=duration: FPS: 2003 FrameTime: 0.499 ms
+[jellyfish] <default>: FPS: 2404 FrameTime: 0.416 ms
+[terrain] <default>: FPS: 231 FrameTime: 4.329 ms
+[shadow] <default>: FPS: 2564 FrameTime: 0.390 ms
+[refract] <default>: FPS: 536 FrameTime: 1.866 ms
+[conditionals] fragment-steps=0:vertex-steps=0: FPS: 2992 FrameTime: 0.334 ms
+[conditionals] fragment-steps=5:vertex-steps=0: FPS: 2842 FrameTime: 0.352 ms
+[conditionals] fragment-steps=0:vertex-steps=5: FPS: 2890 FrameTime: 0.346 ms
+[function] fragment-complexity=low:fragment-steps=5: FPS: 2812 FrameTime: 0.356 ms
+[function] fragment-complexity=medium:fragment-steps=5: FPS: 2927 FrameTime: 0.342 ms
+[loop] fragment-loop=false:fragment-steps=5:vertex-steps=5: FPS: 2842 FrameTime: 0.352 ms
+[loop] fragment-steps=5:fragment-uniform=false:vertex-steps=5: FPS: 2801 FrameTime: 0.357 ms
+[loop] fragment-steps=5:fragment-uniform=true:vertex-steps=5: FPS: 2849 FrameTime: 0.351 ms
+=======================================================
+                                  glmark2 Score: 2307 
+=======================================================
